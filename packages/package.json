@@ -1,0 +1,23 @@
+{
+  "name": "packages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "test:watch": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.14.0",
+  "dependencies": {
+    "idb": "^8.0.3"
+  },
+  "devDependencies": {
+    "happy-dom": "^20.0.10",
+    "pinia": "2.1.7",
+    "vitest": "^4.0.8",
+    "vue": "^3.5.24"
+  }
+}
