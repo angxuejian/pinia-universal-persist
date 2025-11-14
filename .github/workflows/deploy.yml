@@ -14,8 +14,14 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install and build
-        run: npm install && npm run docs:build
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 9
+
+      # 进入 docs 子目录安装/构建
+      - name: Install and Build
+        working-directory: docs     # ⭐关键：进入子目录
+        run: pnpm install --frozen-lockfile && pnpm docs:build
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@releases/v4
