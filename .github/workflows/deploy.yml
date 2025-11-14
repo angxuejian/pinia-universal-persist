@@ -1,0 +1,27 @@
+name: release vitepress site
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  release-html:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install and build
+        run: npm install && npm run docs:build
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@releases/v4
+        with:
+          token: ${{ secrets.DEPLOY_TOKEN }}   # 同一个 token 即可
+          repository-name: angxuejian/angxuejian.github.io
+          branch: main
+          folder: docs/.vitepress/dist              # VitePress 默认 dist 目录
+          target-folder: pinia-universal-persist  # ⭐B 仓库自己的文件夹

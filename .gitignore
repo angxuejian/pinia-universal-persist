@@ -106,3 +106,8 @@ temp/
 .local
 
 pnpm-lock.yaml
+
+# --- VitePress ---
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+docs/.vitepress/temp/
