@@ -105,8 +105,6 @@ temp/
 # Local development
 .local
 
-pnpm-lock.yaml
-
 # --- VitePress ---
 docs/.vitepress/dist/
 docs/.vitepress/cache/

@@ -20,7 +20,6 @@ jobs:
 
       # 进入 docs 子目录安装/构建
       - name: Install and Build
-        working-directory: docs     # ⭐关键：进入子目录
         run: pnpm install --frozen-lockfile && pnpm docs:build
 
       - name: Deploy to GitHub Pages
