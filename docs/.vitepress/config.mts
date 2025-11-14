@@ -2,7 +2,8 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  lang: 'en-US',
+  base: '/pinia-universal-persist/',  // ← 必须这样设置
+  lang: 'zh-CN',
   title: 'Pinia Universal Persist',
   description: 'A universal Pinia persistence plugin supporting localStorage, sessionStorage, cookies, and IndexedDB.',
 
